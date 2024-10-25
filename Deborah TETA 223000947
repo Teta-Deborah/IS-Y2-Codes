@@ -1,0 +1,247 @@
+//Answer for Q1
+package deborah.assignment;
+
+import java.util.Scanner;
+
+/**
+ *
+ * @author deborah
+ */
+public class Question1 {
+    public static void main(String[] args) {
+        System.out.println("Enter a number");
+      Scanner sc = new Scanner(System.in);
+        int n = sc.nextInt(); 
+if (n % 2 == 0) { 
+System.out.println(n + " is even."); } 
+else { 
+System.out.println(n + " is odd."); 
+    }
+    }
+}
+----------------------------------------------------------------
+//Answer Q2
+package deborah.assignment;
+import java.util.Scanner;
+public class Question2 {
+    public static void main(String[] args) {
+        System.out.println("Enter a grade (A,B,C,D or F");
+        Scanner sc= new Scanner(System.in);
+        String grade = sc.next();
+        switch (grade) {
+            case "A":
+                System.out.println("First class!");
+                break;
+            case "B":
+                System.out.println("Second class upper!");
+                break;
+            case "C":
+                System.out.println("Second class lower!");
+                break;
+            case "D":
+                System.out.println("Pass.");
+                break;
+            case "F":
+                System.out.println("Repeat.");
+                break;
+            default:
+                System.out.println("Invalid grade entered.");
+                break;
+        }
+        
+        }        
+    }
+----------------------------------------------------------------------
+//Answer for Q3
+package deborah.assignment;
+import java.util.Scanner;
+public class Question3 {
+    public static void main(String[] args) {
+       
+
+        System.out.println("Enter a year: ");
+         Scanner sc = new Scanner(System.in);
+        int year = sc.nextInt();
+
+        if ((year % 4 == 0 && year % 100 != 0) || ( year % 400 ==0) ) {
+            System.out.println(year + " is a leap year.");
+        } else {
+            System.out.println(year + " is not a leap year.");
+        }
+    }
+}
+----------------------------------------------------------------------------
+//Answer for Q4
+package deborah.assignment;
+import java.util.Scanner;
+/**
+ *
+ * @author deborah
+ */
+public class Question4 {
+    public static void main(String[] args) {
+    System.out.println("Enter 3 numbers");
+    Scanner sc= new Scanner(System.in);
+    int n1= sc.nextInt();
+    int n2= sc.nextInt();
+    int n3= sc.nextInt();
+    if(n1>=n2&&n1>=n3){
+    System.out.println("The largest is:"+n1);
+}
+    else if(n2>=n1 && n2>=n3){
+    System.out.println("The largest is:"+n2);
+}
+    else{
+    System.out.println("The largest number is: " + n3);
+}     
+    }
+}
+------------------------------------------------------------
+//Answer for Q5
+package deborah.assignment;
+import java.util.Scanner;
+
+/**
+ *
+ * @author deborah
+ */
+public class Question5 {
+ public static void main(String[] args) {
+   System.out.println("Enter a number");
+   Scanner sc=new Scanner(System.in);
+   int num = sc.nextInt(); 
+   if(num>0){
+     System.out.println("The numper is positive");
+ }
+   else if(num<0){
+           System.out.println("The number is negative");
+           }
+   else if(num==0){
+           System.out.println("The number is zero");
+}
+   else{
+       System.out.println("invalid");
+   }
+}
+}
+------------------------------------------------------------
+//Answer for Q6
+package deborah.assignment;
+
+/**
+ *
+ * @author deborah
+ */
+public class Question6 {
+    public static void main(String[] args) {
+        for (int i = 1; i <= 7; i++) {
+            
+            for (int j = 7; j > i; j--) {
+                System.out.print(" ");
+            }
+            for (int k = 1; k <= i; k++) {
+                System.out.print(k);
+            }
+            System.out.println();
+        }
+    }
+} 
+
+------------------------------------------------------------
+//Answer for Q7
+package deborah.assignment;
+import java.util.Scanner;
+
+/**
+ *
+ * @author deborah
+ */
+public class Question7 {
+  public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Enter the number of rows for the diamond (half): ");
+        int rows = sc.nextInt();
+        for (int i = 1; i <= rows; i++) {
+            for (int j = rows; j > i; j--) {
+                System.out.print(" "); 
+            }
+            for (int k = 1; k <= (2 * i - 1); k++) {
+                System.out.print("*"); 
+            }
+            System.out.println();
+        }
+
+        // Lower half of diamond
+        for (int i = rows - 1; i >= 1; i--) {
+            for (int j = rows; j > i; j--) {
+                System.out.print(" "); 
+            }
+            for (int k = 1; k <= (2 * i - 1); k++) {
+                System.out.print("*"); 
+            }
+            System.out.println();
+        }
+    }
+}   
+
+------------------------------------------------------------
+//Answer for Q8
+package deborah.assignment;
+
+/**
+ *
+ * @author deboral
+ */
+public class Question8 {
+    public static void main(String[] args) {
+        int [] numbers={10,12,34,23,56,78};
+        int sum=0;
+        for(int i= 0; i < numbers.length;i++){ 
+            sum = sum + numbers[i];
+        }
+        double Average= sum/numbers.length;
+        System.out.println("The average is "+ Average);
+        }
+    }
+
+------------------------------------------------------------
+//Answer for Q9
+package deborah.assignment;
+
+/**
+ *
+ * @author deborah
+ */
+public class Question9 {
+     public static void main(String[] args) {
+        int[] numbers = {3, 4, 6, 1, 9, 7, 5, 8};
+        System.out.println("\nReversed Array:");
+        for (int i = numbers.length - 1; i >= 0; i--) {
+            System.out.print(numbers[i] + " ");
+        }
+    }
+}
+------------------------------------------------------------
+//Answer for Q10
+package deborah.assignment;
+
+/**
+ *
+ * @author deborah
+ */
+public class Question10 {
+ public static void main(String[] args) {
+        int[] numbers = {34, 23, 12, 45, 67, 89, 234, 26, 10, 30, 43};
+        int largest = numbers[0];
+
+        for (int num : numbers) {
+            if (num > largest) {
+                largest = num;
+            }
+        }
+        System.out.println("The largest element is: " + largest);
+    }
+}   
+------------------------------------------------------------
+
+
